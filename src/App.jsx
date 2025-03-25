@@ -8,7 +8,7 @@ import Home from './pages/home/Home';
 import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
 
-function App() { 
+function App() {
   const { pathname } = useLocation();
   const loacation = useLocation()
 
@@ -29,12 +29,12 @@ function App() {
       <Header />
       <AnimatePresence>
         <Routes location={loacation} key={loacation.pathname} >
-          <Route path='/' element={<Home/>} />
-          <Route path='/a-propos' element={<About  />} />
+          <Route path='/' element={<Home />} />
+          <Route path='/a-propos' element={<About />} />
           <Route path='/restos-bars' element={<Contact />} />
-          <Route path='/cart' element={<Contact  />} />
+          <Route path='/cart' element={<Contact />} />
           <Route path='/contact' element={<Contact />} />
-          <Route path='/*' element={<NotFound  />} />
+          <Route path='/*' element={<NotFound />} />
         </Routes>
       </AnimatePresence>
     </>
