@@ -1,0 +1,152 @@
+.Main-Header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+.Main-Header div {
+  margin-top: 2rem;
+}
+
+.Header svg {
+  width: 120px;
+}
+.Main-Header .menu {
+  position: fixed;
+  right: 10%;
+  top: 2.8rem;
+  background-color: var(--red);
+  color: var(--yellow);
+  border: none;
+  padding: 18px 25px;
+  letter-spacing: 0.6px;
+}
+.header-wrapper {
+  overflow: hidden;
+  position: fixed;
+  top: 100vh;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--purple);
+}
+.header-wrapper .relative {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.header-wrapper .sous-header {
+  width: 80%;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-wrapper button {
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--white);
+}
+.header-wrapper .navLink {
+  width: fit-content;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  align-items: center;
+  font-size: 3rem;
+}
+.header-wrapper .navLink a{
+ overflow: hidden;
+}
+.header-wrapper .navLink span{
+    display: flex; 
+}
+
+.header-wrapper .navLink span{
+    transition: all linear .5s;
+    -webkit-transition: all linear .5s;
+    -moz-transition: all linear .5s;
+    -ms-transition: all linear .5s;
+    -o-transition: all linear .5s;
+  }
+.header-wrapper .navLink span:hover {
+  color: var(--yellow);
+}
+.header-wrapper .top {
+  position: absolute;
+  top: -27rem;
+  left: -10rem;
+  z-index: -1;
+  transform: rotate(35deg);
+}
+
+.header-wrapper .buttom {
+  position: absolute;
+  bottom: -28rem;
+  left: -7rem;
+  z-index: -1;
+  transform: rotate(47deg);
+}
+.header-wrapper .right {
+  position: absolute;
+  right: -6rem;
+  bottom: -27rem;
+  z-index: -1;
+  transform: rotate(315deg);
+}
+
+.header-wrapper img {
+  position: absolute;
+  top: 12rem;
+  left: 6rem;
+  z-index: -1;
+  height: 27rem;
+}
+.header-wrapper .insta {
+  max-width: 257px;
+  position: fixed;
+  right: 29px;
+  bottom: 4rem;
+  font-size: 9px;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.header-wrapper .insta svg {
+  width: 26px;
+}
+.header-wrapper .insta a {
+  width: fit-content;
+}
+@media only screen and (max-width: 900px) {
+  .header-wrapper img {
+    top: 25rem;
+    left: -6rem;
+    height: 21rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .header-wrapper .navLink {
+    font-size: 2.5rem;
+  }
+  .header-wrapper .buttom {
+    display: none;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .header-wrapper .insta {
+    right: -0.6rem;
+    bottom: 2rem;
+  }
+  .header-wrapper .navLink {
+    font-size: 2.3rem;
+  }
+}
