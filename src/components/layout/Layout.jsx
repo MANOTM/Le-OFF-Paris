@@ -1,3 +1,4 @@
+import Footer from '../footer/Footer'
 import Loading from '../loading/Loading'
 
 
@@ -6,6 +7,7 @@ export default function Layout({ children }) {
         <>
             <div className="container">
                 {children}
+                <Footer/>
             </div>
             <Loading/>
         </>

@@ -62,6 +62,9 @@
   align-items: center;
   font-size: 3rem;
 }
+.header-wrapper .navLink .active span{
+ color: var(--yellow);
+}
 .header-wrapper .navLink a{
  overflow: hidden;
 }

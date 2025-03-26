@@ -1,16 +1,18 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Lenis from 'lenis';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Header from './components/header/Header';
 import { AnimatePresence } from 'framer-motion';
 import NotFound from './pages/not-found/NotFound';
 import Home from './pages/home/Home';
 import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
+import Loading from './components/loading/Loading';
 
 function App() {
   const { pathname } = useLocation();
   const loacation = useLocation()
+  const [isLoading, setIsLoaading] = useState(true)
 
   useEffect(() => {
     const lenis = new Lenis()
@@ -21,13 +23,14 @@ function App() {
     requestAnimationFrame(ref)
     setTimeout(() => {
       window.scrollTo(0, 0);
-    }, 200)
+    }, 200) 
   }, [pathname]);
+ 
 
   return (
     <>
       <Header />
-      <AnimatePresence>
+      <AnimatePresence> 
         <Routes location={loacation} key={loacation.pathname} >
           <Route path='/' element={<Home />} />
           <Route path='/a-propos' element={<About />} />
@@ -40,5 +43,4 @@ function App() {
     </>
   )
 }
-
 export default App
