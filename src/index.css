@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
 
 :root {
   --red: #ff2e1e;
@@ -18,8 +18,7 @@
     font-family: "Boldonse", "sans-serif";
     text-decoration: none;
     color: var(--white);
-}
-body{ background-color: var(--red);}
+} 
 
 button,
 input,
@@ -31,10 +30,18 @@ textarea {
   margin: 0;
   /* 2 */
 }
+ 
  .container{
   overflow: hidden;
   min-height: 100vh;
   width: 100vw;
+ }
+ .Winky{
+  
+  font-family: "Winky Sans", sans-serif;
+ }
+ .f-900{
+  font-weight: 900;
  }
 button{
   cursor: pointer;

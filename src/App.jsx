@@ -5,14 +5,13 @@ import Header from './components/header/Header';
 import { AnimatePresence } from 'framer-motion';
 import NotFound from './pages/not-found/NotFound';
 import Home from './pages/home/Home';
-import About from './pages/about/About';
-import Contact from './pages/contact/Contact';
-import Loading from './components/loading/Loading';
+import About from './pages/about/About'; 
+import Resto from './pages/resto/Resto';
+import Cart from './pages/cart/Cart';
 
 function App() {
   const { pathname } = useLocation();
-  const loacation = useLocation()
-  const [isLoading, setIsLoaading] = useState(true)
+  const loacation = useLocation() 
 
   useEffect(() => {
     const lenis = new Lenis()
@@ -27,20 +26,16 @@ function App() {
   }, [pathname]);
  
 
-  return (
-    <>
-      <Header />
+  return ( 
       <AnimatePresence> 
         <Routes location={loacation} key={loacation.pathname} >
           <Route path='/' element={<Home />} />
           <Route path='/a-propos' element={<About />} />
-          <Route path='/restos-bars' element={<Contact />} />
-          <Route path='/cart' element={<Contact />} />
-          <Route path='/contact' element={<Contact />} />
+          <Route path='/restos' element={<Resto />} />
+          <Route path='/cart' element={<Cart />} /> 
           <Route path='/*' element={<NotFound />} />
         </Routes>
-      </AnimatePresence>
-    </>
+      </AnimatePresence> 
   )
 }
 export default App

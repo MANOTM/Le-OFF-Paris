@@ -5,6 +5,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 80%;
+  z-index: 99;
 }
 .Main-Header div {
   margin-top: 2rem;
@@ -31,6 +32,7 @@
   height: 100vh;
   width: 100vw;
   background-color: var(--purple);
+  z-index: 1000;
 }
 .header-wrapper .relative {
   position: relative;
@@ -128,6 +130,9 @@
 }
 .header-wrapper .insta a {
   width: fit-content;
+}
+.insta p , .fermer span{
+  font-size: 13px;
 }
 @media only screen and (max-width: 900px) {
   .header-wrapper img {

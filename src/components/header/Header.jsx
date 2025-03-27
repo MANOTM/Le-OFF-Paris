@@ -19,7 +19,7 @@ export default function Header() {
             <div className="Main-Header">
                 <div>
                     <NavLink to='/'> <Icon fill="#ff2e1e" /> </NavLink>
-                    <button onClick={HandleHeader} className="menu border-r">Menu</button>
+                    <button onClick={HandleHeader} className="menu border-r Winky f-900">Menu</button>
                 </div>
             </div>
             <AnimatePresence mode="wait">
@@ -36,7 +36,7 @@ const MainAnimation = {
 }
 const LinkAnimation = {
     from: { y: 90 },
-    to: { y: 0, transition: { ease: [0.932, 0.017, 0.12, 1.016], duration: .2, delay: .1 } },
+    to: { y: 0, transition: { ease: 'linear', duration: .2, delay: .1 } },
     out: { y: 130, opacity: 0 }
 }
 const ImgAnimation = {
@@ -59,21 +59,18 @@ function HeaderWrepper({ HandleHeader }) {
                 
                 <motion.div className="sous-header" initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: .3 } }} exit={{ y: 20, opacity: 0 }}>
                     <NavLink to='/' onClick={removeHeaderToggle}> <Icon fill="#fff" /> </NavLink>
-                    <button className="fermer" onClick={HandleHeader}>  <span>Fermer </span> <span>x</span></button>
+                    <button className="fermer" onClick={HandleHeader}>  <span className="f-900 Winky">Fermer </span> <span className="f-900 Winky">x</span></button>
                 </motion.div>
                 <motion.div className="navLink">
                     <NavLink to='/a-propos'>
                         <motion.span onClick={removeHeaderToggle} variants={LinkAnimation} initial='from' animate='to' exit='out'>À propos</motion.span>
                     </NavLink>
-                    <NavLink to='/restos-bars'>
-                        <motion.span onClick={removeHeaderToggle} variants={LinkAnimation} initial='from' animate='to' exit='out'>Restos & Bars</motion.span>
+                    <NavLink to='/restos'>
+                        <motion.span onClick={removeHeaderToggle} variants={LinkAnimation} initial='from' animate='to' exit='out'>Restos & Coffe</motion.span>
                     </NavLink>
                     <NavLink to='/cart'>
                         <motion.span onClick={removeHeaderToggle} variants={LinkAnimation} initial='from' animate='to' exit='out'>Carte</motion.span>
-                    </NavLink>
-                    <NavLink to='/contact'>
-                        <motion.span onClick={removeHeaderToggle} variants={LinkAnimation} initial='from' animate='to' exit='out'>Contact</motion.span>
-                    </NavLink>
+                    </NavLink> 
                 </motion.div>
 
                 <motion.div initial={{ top: '-30rem', left: '-15rem', opacity: 0 }} animate={{ top: '-27rem', left: '-10rem', opacity: 1, transition: { delay: .3 } }} className="top"><Wave fill="#fc87f6" /></motion.div>
@@ -82,7 +79,7 @@ function HeaderWrepper({ HandleHeader }) {
                 <motion.img variants={ImgAnimation} initial='from' animate='to' exit='out' src="https://cdn.sanity.io/images/wwxezq1v/production/01e65dc649ebeb82abc8ddcbbae34f8b9e7a11fb-1500x1356.png?bg=0fff&w=842&q=80&fit=fill&auto=format" />
                 <motion.div className="insta" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0, transition: { delay: .5, duration: .5, ease: [0.932, 0.017, 0.12, 1.016] } }} exit={{ opacity: 0, y: 20 }}>
                     <a href="https://www.instagram.com/leoff_paris/"><Insta fill="#fff" /></a>
-                    <p>Le OFF est une initiative portée par Wine Paris & Vinexpo Paris, le premier événement professionnel des vins et spiritueux.</p>
+                    <p className="Winky f-900">Le OFF est une initiative portée par Wine Paris & Vinexpo Paris, le premier événement professionnel des vins et spiritueux.</p>
                 </motion.div>
 
             </div>

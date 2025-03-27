@@ -121,12 +121,14 @@
   z-index: 111;
 }
 .btn-an {
-  font-size: 8px;
+  font-size: 15px;
   border: 2px solid;
   border-radius: 24px;
-  padding: 13px 20px;
+  padding: 8px 20px;
+  padding-top: 4px;
   position: relative;
   overflow: hidden;
+  font-weight: 800;
 }
 
 .p{ 
@@ -166,8 +168,8 @@
 }
 .home-about .someblabla p {
   max-width: 400px;
-  font-size: 10px;
-  line-height: 2;
+  font-size: 17px; 
+  text-align: justify;
 }
 .restos-section .btn-an{ 
     border-color: var(--purple); 
@@ -197,13 +199,13 @@
   padding: 2rem 0;
   margin-top: 2rem;
 }
-.slide .item {
+.item {
   position: relative;
   flex-shrink: 0;
   scroll-snap-align: start;
   width: 330px;
 }
-.slide .item::after {
+.item::after {
   content: attr(data-count) "'";
   position: absolute;
   background: var(--purple);
@@ -213,7 +215,7 @@
   border-radius: 30px;
   font-size: 10px;
 }
-.slide .item .item-img {
+.item-img {
   overflow: hidden;
   height: 230px;
   transform: rotate(-6deg);
@@ -283,5 +285,8 @@
   }
   .someblabla h1 {
     font-size: 1.5rem;
+  }
+  .home-about .flex img{
+    display: none;
   }
 }

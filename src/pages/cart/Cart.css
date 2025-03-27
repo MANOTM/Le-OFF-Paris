@@ -1,0 +1,25 @@
+.cart{
+    width: 100%;
+    min-height: 66vh;
+    background-color: var(--green);
+    background-image: url("https://cdn.sanity.io/images/wwxezq1v/production/2eea9b045224058d2d792bcc742f08d903d12366-2560x1707.jpg?w=2224&h=1482&q=80&fit=crop&rect=0,444,2560,1263&fp-x=0.5&fp-y=0.774312774312774&auto=format");
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0% 0% 61% 45% / 40% 50% 62% 91%;
+}
+.maps{
+    width: 90%;
+    margin: 3rem auto;
+    overflow: hidden;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+.maps iframe{
+    border:0;
+}
+.cart h1{    color: var(--red);
+    font-size: 7rem;}
